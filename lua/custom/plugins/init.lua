@@ -3,6 +3,12 @@
 --
 -- See the kickstart.nvim README for more information
 return {
+  {
+    'nvim-tree/nvim-tree.lua',
+    config = function()
+      require('nvim-tree').setup()
+    end,
+  },
   'vimlab/split-term.vim',
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   'kepano/flexoki-neovim',

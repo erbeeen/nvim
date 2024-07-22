@@ -1,5 +1,4 @@
 -- NOTE: Standard
--- vim.keymap.set({ 'n', 'i', 'v' }, '<C-n>', '<cmd> Ex <cr>', { desc = 'File Tree' })
 vim.keymap.set('n', '<leader>tm', '<cmd> Telescope colorscheme <cr>', { desc = 'Change Colorscheme', silent = true, noremap = true })
 vim.keymap.set('n', '<leader>q', '<C-w>q', { desc = 'Close Window' })
 
@@ -29,3 +28,6 @@ vim.keymap.set('n', '<leader>x', '<cmd> BufferClose! <cr>', { desc = 'Close Buff
 
 -- NOTE: Split Term
 vim.keymap.set('n', '<A-h>', '<cmd> 15Term <cr>', { desc = 'Horizontal Term' })
+
+-- NOTE: NvimTree
+vim.keymap.set('n', '<C-n>', '<cmd> NvimTreeToggle <cr>', { silent = true, noremap = true })

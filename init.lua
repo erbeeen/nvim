@@ -98,7 +98,7 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- My Custom Options
+-- NOTE: Custom Options
 vim.opt.foldmethod = 'indent'
 vim.opt.foldlevel = 10
 vim.opt.guicursor = 'n-v-c-i:block'
@@ -191,7 +191,6 @@ vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
-vim.keymap.set('n', ';', ':')
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
@@ -583,6 +582,7 @@ require('lazy').setup({
         pyright = {},
         cssls = {},
         html = {},
+        emmet_language_server = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -590,7 +590,9 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        tsserver = {},
+        tsserver = {
+          filetypes = { 'javascript', 'typescript', 'jsx', 'typescript.tsx', 'typescriptreact', 'javascriptreact' },
+        },
         --
 
         lua_ls = {
