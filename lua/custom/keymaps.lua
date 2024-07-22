@@ -1,0 +1,16 @@
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-n>', '<cmd> Ex <cr>', { desc = 'File Tree' })
+vim.keymap.set('n', '<leader>tm', '<cmd> Telescope colorscheme <cr>', { desc = 'Change Colorscheme' })
+vim.keymap.set('n', '<tab>', '<cmd> bnext <cr>', { desc = 'Next Buffer' })
+vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <cr>', { desc = 'Previous Buffer' })
+vim.keymap.set('n', '<leader>x', '<cmd> BufferClose <cr>', { desc = 'Close Buffer' })
+vim.keymap.set('n', '<leader>ew', '<C-w>q', { desc = 'Close Window' })
+vim.keymap.set('n', '<A-h>', '<cmd> split term <cr>', { desc = 'Horizontal Term' })
+vim.keymap.set('n', '<leader>gg', '<cmd> Neogit <cr>', { desc = 'Neogit' })
+
+vim.keymap.set('n', ']f', function()
+  require('todo-comments').jump_next()
+end, { desc = 'Next todo comment' })
+
+vim.keymap.set('n', '[f', function()
+  require('todo-comments').jump_prev()
+end, { desc = 'Previous todo comment' })
