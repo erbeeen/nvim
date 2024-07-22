@@ -3,6 +3,7 @@
 --
 -- See the kickstart.nvim README for more information
 return {
+  'vimlab/split-term.vim',
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   'kepano/flexoki-neovim',
   {

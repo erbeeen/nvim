@@ -176,7 +176,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 require 'custom.keymaps'
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>Q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -581,6 +581,8 @@ require('lazy').setup({
         clangd = {},
         gopls = {},
         pyright = {},
+        cssls = {},
+        html = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -667,11 +669,11 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         go = { 'gofmt' },
-        typesript = { 'prettier' },
         html = { 'prettier' },
         css = { 'prettier' },
         javascript = { 'prettier' },
-        json = { 'json' },
+        typescript = { 'prettier' },
+        json = { 'prettier' },
         c = { 'clang-format' },
         cpp = { 'clang-format' },
 
@@ -812,7 +814,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'flexoki-dark'
+      vim.cmd.colorscheme 'catppuccin'
 
       -- You can configure highlights by doing something like:
       -- vim.cmd.hi 'Comment gui=none'
@@ -862,7 +864,28 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = {
+        'bash',
+        'c',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+        'json',
+        'css',
+        'cpp',
+        'python',
+        'go',
+        'javascript',
+        'typescript',
+        'sql',
+        'css',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {

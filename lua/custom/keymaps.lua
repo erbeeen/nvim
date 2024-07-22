@@ -1,16 +1,31 @@
+-- NOTE: Standard
 vim.keymap.set({ 'n', 'i', 'v' }, '<C-n>', '<cmd> Ex <cr>', { desc = 'File Tree' })
-vim.keymap.set('n', '<leader>tm', '<cmd> Telescope colorscheme <cr>', { desc = 'Change Colorscheme' })
-vim.keymap.set('n', '<tab>', '<cmd> bnext <cr>', { desc = 'Next Buffer' })
-vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <cr>', { desc = 'Previous Buffer' })
-vim.keymap.set('n', '<leader>x', '<cmd> BufferClose <cr>', { desc = 'Close Buffer' })
-vim.keymap.set('n', '<leader>ew', '<C-w>q', { desc = 'Close Window' })
-vim.keymap.set('n', '<A-h>', '<cmd> split term <cr>', { desc = 'Horizontal Term' })
-vim.keymap.set('n', '<leader>gg', '<cmd> Neogit <cr>', { desc = 'Neogit' })
+vim.keymap.set('n', '<leader>tm', '<cmd> Telescope colorscheme <cr>', { desc = 'Change Colorscheme', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>q', '<C-w>q', { desc = 'Close Window' })
 
-vim.keymap.set('n', ']f', function()
+-- NOTE: Todo Comments
+vim.keymap.set('n', '<leader>j', function()
   require('todo-comments').jump_next()
 end, { desc = 'Next todo comment' })
 
-vim.keymap.set('n', '[f', function()
+vim.keymap.set('n', '<leader>k', function()
   require('todo-comments').jump_prev()
 end, { desc = 'Previous todo comment' })
+
+-- NOTE: Neogit + Gitsigns
+vim.keymap.set('n', '<leader>gg', '<cmd> Neogit kind=floating <cr>', { desc = 'Neogit', noremap = true })
+vim.keymap.set('n', '<leader>gc', '<cmd> Neogit commit <cr>', { desc = 'Neogit Commit', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>gl', '<cmd> Neogit pull <cr>', { desc = 'Neogit pull', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>gp', '<cmd> Neogit push <cr>', { desc = 'Neogit push', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>gb', '<cmd> Telescope git_branches <cr>', { desc = 'Telescope Git Branches', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>gB', '<cmd> G blame <cr>', { desc = 'Git Blame', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>gdo', '<cmd> DiffviewOpen <cr>', { desc = 'Diffview Open', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>gdc', '<cmd> DiffviewClose <cr>', { desc = 'Diffview Close', silent = true, noremap = true })
+
+-- NOTE: Barbar.nvim
+vim.keymap.set('n', '<tab>', '<cmd> bnext <cr>', { desc = 'Next Buffer' })
+vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <cr>', { desc = 'Previous Buffer' })
+vim.keymap.set('n', '<leader>x', '<cmd> BufferClose! <cr>', { desc = 'Close Buffer' })
+
+-- NOTE: Split Term
+vim.keymap.set('n', '<A-h>', '<cmd> 15Term <cr>', { desc = 'Horizontal Term' })
