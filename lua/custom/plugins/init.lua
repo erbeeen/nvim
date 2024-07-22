@@ -9,7 +9,6 @@ return {
       require('nvim-tree').setup()
     end,
   },
-  'vimlab/split-term.vim',
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   'kepano/flexoki-neovim',
   {
@@ -39,5 +38,11 @@ return {
       'nvim-telescope/telescope.nvim', -- optional
     },
     config = true,
+  },
+  {
+    'akinsho/toggleterm.nvim',
+    config = function()
+      require('toggleterm').setup()
+    end,
   },
 }

@@ -26,8 +26,8 @@ vim.keymap.set('n', '<tab>', '<cmd> bnext <cr>', { desc = 'Next Buffer' })
 vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <cr>', { desc = 'Previous Buffer' })
 vim.keymap.set('n', '<leader>x', '<cmd> BufferClose! <cr>', { desc = 'Close Buffer' })
 
--- NOTE: Split Term
-vim.keymap.set('n', '<A-h>', '<cmd> 15Term <cr>', { desc = 'Horizontal Term' })
+-- NOTE: Toggle Term
+vim.keymap.set({'n', 'i', 'v', 't'}, '<A-h>', '<cmd> :ToggleTerm <cr>', { desc = 'Horizontal Term' })
 
 -- NOTE: NvimTree
-vim.keymap.set('n', '<C-n>', '<cmd> NvimTreeToggle <cr>', { silent = true, noremap = true })
+vim.keymap.set({ 'n', 'i', 'v', 't' }, '<C-n>', '<cmd> NvimTreeToggle <cr>', { silent = true, noremap = true })
