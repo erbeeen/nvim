@@ -1,5 +1,5 @@
 -- NOTE: Standard
-vim.keymap.set({ 'n', 'i', 'v' }, '<C-n>', '<cmd> Ex <cr>', { desc = 'File Tree' })
+-- vim.keymap.set({ 'n', 'i', 'v' }, '<C-n>', '<cmd> Ex <cr>', { desc = 'File Tree' })
 vim.keymap.set('n', '<leader>tm', '<cmd> Telescope colorscheme <cr>', { desc = 'Change Colorscheme', silent = true, noremap = true })
 vim.keymap.set('n', '<leader>q', '<C-w>q', { desc = 'Close Window' })
 
