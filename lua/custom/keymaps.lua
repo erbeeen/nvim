@@ -1,6 +1,10 @@
 -- NOTE: Standard
 vim.keymap.set('n', '<leader>tm', '<cmd> Telescope colorscheme <cr>', { desc = 'Change Colorscheme', silent = true, noremap = true })
 vim.keymap.set('n', '<leader>q', '<C-w>q', { desc = 'Close Window' })
+vim.keymap.set('v', 'J', ":m '>+1<cr>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv")
+vim.keymap.set('i', '<C-e>', '<Esc>A')
+vim.keymap.set('i', '<C-a>', '<Esc>I')
 
 -- NOTE: Todo Comments
 vim.keymap.set('n', '<leader>j', function()
@@ -12,7 +16,7 @@ vim.keymap.set('n', '<leader>k', function()
 end, { desc = 'Previous todo comment' })
 
 -- NOTE: Neogit + Gitsigns
-vim.keymap.set('n', '<leader>gg', '<cmd> Neogit kind=floating <cr>', { desc = 'Neogit', noremap = true })
+vim.keymap.set('n', '<leader>gg', '<cmd> Neogit <cr>', { desc = 'Neogit', noremap = true })
 vim.keymap.set('n', '<leader>gc', '<cmd> Neogit commit <cr>', { desc = 'Neogit Commit', silent = true, noremap = true })
 vim.keymap.set('n', '<leader>gl', '<cmd> Neogit pull <cr>', { desc = 'Neogit pull', silent = true, noremap = true })
 vim.keymap.set('n', '<leader>gp', '<cmd> Neogit push <cr>', { desc = 'Neogit push', silent = true, noremap = true })
@@ -27,7 +31,7 @@ vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <cr>', { desc = 'Previous Buffer
 vim.keymap.set('n', '<leader>x', '<cmd> BufferClose! <cr>', { desc = 'Close Buffer' })
 
 -- NOTE: Toggle Term
-vim.keymap.set({'n', 'i', 'v', 't'}, '<A-h>', '<cmd> :ToggleTerm <cr>', { desc = 'Horizontal Term' })
+vim.keymap.set({ 'n', 'i', 'v', 't' }, '<A-h>', '<cmd> :ToggleTerm <cr>', { desc = 'Horizontal Term' })
 
 -- NOTE: NvimTree
 vim.keymap.set({ 'n', 'i', 'v', 't' }, '<C-n>', '<cmd> NvimTreeToggle <cr>', { silent = true, noremap = true })
