@@ -6,6 +6,9 @@ vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv")
 vim.keymap.set('i', '<C-e>', '<Esc>A')
 vim.keymap.set('i', '<C-a>', '<Esc>I')
 
+-- NOTE: LSP Diagnostics
+vim.keymap.set('n', 'ff', '<cmd> lua vim.diagnostic.open_float() <cr>')
+
 -- NOTE: Todo Comments
 vim.keymap.set('n', '<leader>j', function()
   require('todo-comments').jump_next()
