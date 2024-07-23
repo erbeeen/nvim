@@ -3,20 +3,27 @@
 --
 -- See the kickstart.nvim README for more information
 return {
+  -- NOTE: Colorschemes
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+  { 'ellisonleao/gruvbox.nvim' },
+
+  -- NOTE: Status Line
   {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-      require('lualine').setup()
+      require('lualine').setup {}
     end,
   },
+
+  -- NOTE: File Tree
   {
     'nvim-tree/nvim-tree.lua',
     config = function()
       require('nvim-tree').setup()
     end,
   },
-  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+  -- NOTE: Tabs
   {
     'romgrk/barbar.nvim',
     dependencies = {
@@ -34,6 +41,8 @@ return {
     },
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },
+
+  -- NOTE: Git Integration
   'sindrets/diffview.nvim', -- optional - Diff integration
   {
     'NeogitOrg/neogit',
@@ -45,6 +54,8 @@ return {
     },
     config = true,
   },
+
+  -- NOTE: Terminal Toggle
   {
     'akinsho/toggleterm.nvim',
     config = function()

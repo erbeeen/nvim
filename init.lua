@@ -98,10 +98,6 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- NOTE: Custom Options and Keymaps
-require 'custom.options'
-require 'custom.keymaps'
-
 -- Make line numbers defaut
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -661,6 +657,7 @@ require('lazy').setup({
         json = { 'prettier' },
         c = { 'clang-format' },
         cpp = { 'clang-format' },
+        python = { 'autopep8' },
 
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
@@ -803,7 +800,8 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'catppuccin'
+      -- vim.cmd.colorscheme 'catppuccin'
+      vim.cmd.colorscheme 'gruvbox'
 
       -- You can configure highlights by doing something like:
       -- vim.cmd.hi 'Comment gui=none'
@@ -947,5 +945,8 @@ require('lazy').setup({
   },
 })
 
+-- NOTE: Custom Options and Keymaps
+require 'custom.options'
+require 'custom.keymaps'
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

@@ -9,5 +9,6 @@ vim.opt.softtabstop = 2
 vim.o.background = 'dark'
 
 -- NOTE: For Transparent background
---  Comment out to disable
-vim.cmd 'hi normal guibg=NONE'
+-- Comment out to disable
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
