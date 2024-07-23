@@ -8,16 +8,16 @@ vim.keymap.set('i', '<C-e>', '<Esc>A')
 vim.keymap.set('i', '<C-a>', '<Esc>I')
 
 -- NOTE: LSP Floating Diagnostic
-vim.keymap.set('n', 'ff', '<cmd> lua vim.diagnostic.open_float() <cr>')
+vim.keymap.set('n', 'ff', '<cmd> lua vim.diagnostic.open_float() <cr>', { desc = 'LSP Floating Diagnostic' })
 
 -- NOTE: Todo Comments
 vim.keymap.set('n', '<leader>j', function()
   require('todo-comments').jump_next()
-end, { desc = 'Next todo comment' })
+end, { desc = '[J] Next todo comment' })
 
 vim.keymap.set('n', '<leader>k', function()
   require('todo-comments').jump_prev()
-end, { desc = 'Previous todo comment' })
+end, { desc = '[K] Previous todo comment' })
 
 -- NOTE: Neogit + Gitsigns
 vim.keymap.set('n', '<leader>gg', '<cmd> Neogit <cr>', { desc = 'Neogit', noremap = true })

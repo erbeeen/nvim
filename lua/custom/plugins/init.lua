@@ -17,7 +17,6 @@ return {
     end,
   },
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
-  'kepano/flexoki-neovim',
   {
     'romgrk/barbar.nvim',
     dependencies = {
