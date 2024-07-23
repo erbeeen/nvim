@@ -160,6 +160,7 @@ vim.keymap.set('n', '<leader>Q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set('t', 'jkjk', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- NOTE: Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
@@ -553,6 +554,7 @@ require('lazy').setup({
         cssls = {},
         html = {},
         emmet_language_server = {},
+        sqlls = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --

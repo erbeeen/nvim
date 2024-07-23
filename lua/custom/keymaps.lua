@@ -46,7 +46,7 @@ vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <cr>', { desc = 'Previous Buffer
 vim.keymap.set('n', '<leader>x', '<cmd> BufferClose! <cr>', { desc = 'Close Buffer' })
 
 -- NOTE: Toggle Term
-vim.keymap.set({ 'n', 'i', 'v', 't' }, '<A-h>', '<cmd> :ToggleTerm <cr> <cmd>hi normal guibg=NONE <cr>', { desc = 'Horizontal Term' })
+vim.keymap.set({ 'n', 'i', 'v', 't' }, '<A-h>', '<cmd> :ToggleTerm <cr><cmd>hi normal guibg=NONE <cr>', { desc = 'Horizontal Term' })
 
 -- NOTE: NvimTree
 vim.keymap.set({ 'n', 'i', 'v', 't' }, '<C-n>', '<cmd> NvimTreeToggle <cr> <cmd>hi normal guibg=NONE <cr>', { silent = true, noremap = true })
