@@ -98,16 +98,9 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- NOTE: Custom Options
-vim.opt.foldmethod = 'indent'
-vim.opt.foldlevel = 10
-vim.opt.guicursor = 'n-v-c-i:block'
-vim.opt.smarttab = true
-vim.opt.expandtab = true
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
-vim.o.background = 'dark'
+-- NOTE: Custom Options and Keymaps
+require 'custom.options'
+require 'custom.keymaps'
 
 -- Make line numbers defaut
 vim.opt.number = true
@@ -169,9 +162,6 @@ vim.opt.scrolloff = 10
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-
--- Custom Keymaps
-require 'custom.keymaps'
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>Q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
