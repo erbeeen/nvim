@@ -1,12 +1,13 @@
 -- NOTE: Standard
 vim.keymap.set('n', '<leader>tm', '<cmd> Telescope colorscheme <cr>', { desc = 'Change Colorscheme', silent = true, noremap = true })
+vim.keymap.set('i', 'jk', '<Esc>', { noremap = true })
 vim.keymap.set('n', '<leader>q', '<C-w>q', { desc = 'Close Window' })
 vim.keymap.set('v', 'J', ":m '>+1<cr>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv")
 vim.keymap.set('i', '<C-e>', '<Esc>A')
 vim.keymap.set('i', '<C-a>', '<Esc>I')
 
--- NOTE: LSP Diagnostics
+-- NOTE: LSP Floating Diagnostic
 vim.keymap.set('n', 'ff', '<cmd> lua vim.diagnostic.open_float() <cr>')
 
 -- NOTE: Todo Comments
@@ -20,9 +21,14 @@ end, { desc = 'Previous todo comment' })
 
 -- NOTE: Neogit + Gitsigns
 vim.keymap.set('n', '<leader>gg', '<cmd> Neogit <cr>', { desc = 'Neogit', noremap = true })
+vim.keymap.set('n', '<leader>go', '<cmd> Neogit log <cr>', { desc = 'Neogit Log', silent = true, noremap = true })
 vim.keymap.set('n', '<leader>gc', '<cmd> Neogit commit <cr>', { desc = 'Neogit Commit', silent = true, noremap = true })
-vim.keymap.set('n', '<leader>gl', '<cmd> Neogit pull <cr>', { desc = 'Neogit pull', silent = true, noremap = true })
-vim.keymap.set('n', '<leader>gp', '<cmd> Neogit push <cr>', { desc = 'Neogit push', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>gf', '<cmd> Neogit fetch <cr>', { desc = 'Neogit Fetch', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>gl', '<cmd> Neogit pull <cr>', { desc = 'Neogit Pull', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>gp', '<cmd> Neogit push <cr>', { desc = 'Neogit Push', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>gm', '<cmd> Neogit merge <cr>', { desc = 'Neogit Merge', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>grs', '<cmd> Neogit reset <cr>', { desc = 'Neogit Reset', silent = true, noremap = true })
+vim.keymap.set('n', '<leader>grv', '<cmd> Neogit revert <cr>', { desc = 'Neogit Revert', silent = true, noremap = true })
 vim.keymap.set('n', '<leader>gb', '<cmd> Telescope git_branches <cr>', { desc = 'Telescope Git Branches', silent = true, noremap = true })
 vim.keymap.set('n', '<leader>gB', '<cmd> G blame <cr>', { desc = 'Git Blame', silent = true, noremap = true })
 vim.keymap.set('n', '<leader>gdo', '<cmd> DiffviewOpen <cr>', { desc = 'Diffview Open', silent = true, noremap = true })
