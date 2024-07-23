@@ -13,11 +13,11 @@ vim.keymap.set('n', '<leader>ff', '<cmd> lua vim.diagnostic.open_float() <cr>', 
 -- NOTE: Todo Comments
 vim.keymap.set('n', '<leader>j', function()
   require('todo-comments').jump_next()
-end, { desc = '[J] Next todo comment' })
+end, { desc = 'Next todo comment' })
 
 vim.keymap.set('n', '<leader>k', function()
   require('todo-comments').jump_prev()
-end, { desc = '[K] Previous todo comment' })
+end, { desc = 'Previous todo comment' })
 
 -- NOTE: Neogit + Gitsigns
 vim.keymap.set('n', '<leader>gg', '<cmd> Neogit <cr> <cmd>hi normal guibg=NONE <cr>', { desc = 'Neogit', noremap = true })
