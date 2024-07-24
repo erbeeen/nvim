@@ -15,8 +15,8 @@ return {
       require('lualine').setup {
         tabline = {
           lualine_a = { 'mode' },
-          lualine_b = { 'filename' },
-          lualine_c = { 'branch', 'diff', 'diagnostics' },
+          lualine_b = { 'branch' },
+          lualine_c = { 'filename', 'diff', 'diagnostics' },
           lualine_x = { 'filetype' },
           lualine_y = { 'location' },
           lualine_z = { 'os.date("%I:%M:%S %m/%d")' },
