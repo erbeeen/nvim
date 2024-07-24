@@ -98,11 +98,11 @@ return {
         },
         popup = {
           position = {
-            row = '10%',
+            row = '70%',
             col = '50%',
           },
           size = {
-            width = '60%',
+            width = '20%',
           },
           border = {
             style = 'rounded',
