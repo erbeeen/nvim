@@ -19,10 +19,10 @@ return {
           lualine_c = { 'filename', 'diff', 'diagnostics' },
           lualine_x = { 'filetype' },
           lualine_y = { 'location' },
-          lualine_z = { 'os.date("%I:%M:%S %m/%d")' },
+          lualine_z = { 'os.date("%I:%M %m/%d")' },
         },
         inactive_sections = {},
-        options = { theme = 'gruvbox' },
+        options = { theme = 'everforest' },
       }
     end,
   },
