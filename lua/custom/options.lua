@@ -8,10 +8,17 @@ vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.o.background = 'dark'
 
--- NOTE: For Transparent background
+-- NOTE: For removing bottom status line
+vim.opt.laststatus = 0
+
+-- NOTE: For making background color navy blue
 -- Comment out to disable
-vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+local navy_blue = '#282c34'
+vim.api.nvim_set_hl(0, 'Normal', { bg = navy_blue })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = navy_blue })
+vim.api.nvim_set_hl(0, 'CursorLine', { bg = navy_blue })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = navy_blue })
+vim.api.nvim_set_hl(0, 'SignColumn', { bg = navy_blue })
 
 -- NOTE: Copied from kickstart
 -- Turning this on will make indents have character markers

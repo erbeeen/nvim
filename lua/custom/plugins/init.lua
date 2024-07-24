@@ -12,7 +12,18 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-      require('lualine').setup {}
+      require('lualine').setup {
+        tabline = {
+          lualine_a = { 'mode' },
+          lualine_b = { 'filename' },
+          lualine_c = { 'branch', 'diff', 'diagnostics' },
+          lualine_x = { 'filetype' },
+          lualine_y = { 'progress' },
+          lualine_z = { 'location' },
+        },
+        inactive_sections = {},
+        options = { theme = 'gruvbox' },
+      }
     end,
   },
 
@@ -23,24 +34,25 @@ return {
       require('nvim-tree').setup()
     end,
   },
+
   -- NOTE: Tabs
-  {
-    'romgrk/barbar.nvim',
-    dependencies = {
-      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
-    },
-    init = function()
-      vim.g.barbar_auto_setup = false
-    end,
-    opts = {
-      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-      -- animation = true,
-      -- insert_at_start = true,
-      -- …etc.
-    },
-    version = '^1.0.0', -- optional: only update when a new 1.x version is released
-  },
+  -- {
+  --   'romgrk/barbar.nvim',
+  --   dependencies = {
+  --     'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+  --     'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+  --   },
+  --   init = function()
+  --     vim.g.barbar_auto_setup = false
+  --   end,
+  --   opts = {
+  --     -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+  --     -- animation = true,
+  --     -- insert_at_start = true,
+  --     -- …etc.
+  --   },
+  --   version = '^1.0.0', -- optional: only update when a new 1.x version is released
+  -- },
 
   -- NOTE: Git Integration
   'sindrets/diffview.nvim', -- optional - Diff integration
@@ -60,6 +72,14 @@ return {
     'akinsho/toggleterm.nvim',
     config = function()
       require('toggleterm').setup()
+    end,
+  },
+
+  -- NOTE: Harpoon
+  {
+    'ThePrimeagen/harpoon',
+    config = function()
+      require('harpoon').setup()
     end,
   },
 }

@@ -7,6 +7,9 @@ vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv")
 vim.keymap.set('i', '<C-e>', '<Esc>A')
 vim.keymap.set('i', '<C-a>', '<Esc>I')
 
+-- NOTE: To close a buffer. Substitute for disabling barbar
+vim.keymap.set('n', '<leader>x', '<cmd> bd <cr>', { desc = 'Close buffer' })
+
 -- NOTE: LSP Floating Diagnostic
 vim.keymap.set('n', '<leader>ff', '<cmd> lua vim.diagnostic.open_float() <cr>', { desc = 'LSP Floating Diagnostic' })
 
@@ -41,12 +44,30 @@ vim.keymap.set('n', '<leader>gdo', '<cmd> DiffviewOpen <cr> <cmd>hi normal guibg
 vim.keymap.set('n', '<leader>gdc', '<cmd> DiffviewClose <cr> <cmd>hi normal guibg=NONE <cr>', { desc = 'Diffview Close', silent = true, noremap = true })
 
 -- NOTE: Barbar.nvim
-vim.keymap.set('n', '<tab>', '<cmd> bnext <cr>', { desc = 'Next Buffer' })
-vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <cr>', { desc = 'Previous Buffer' })
-vim.keymap.set('n', '<leader>x', '<cmd> BufferClose! <cr>', { desc = 'Close Buffer' })
+-- vim.keymap.set('n', '<tab>', '<cmd> bnext <cr>', { desc = 'Next Buffer' })
+-- vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <cr>', { desc = 'Previous Buffer' })
+-- vim.keymap.set('n', '<leader>x', '<cmd> BufferClose! <cr>', { desc = 'Close Buffer' })
 
 -- NOTE: Toggle Term
 vim.keymap.set({ 'n', 'i', 'v', 't' }, '<A-h>', '<cmd> :ToggleTerm <cr><cmd>hi normal guibg=NONE <cr>', { desc = 'Horizontal Term' })
 
 -- NOTE: NvimTree
 vim.keymap.set({ 'n', 'i', 'v', 't' }, '<C-n>', '<cmd> NvimTreeToggle <cr> <cmd>hi normal guibg=NONE <cr>', { silent = true, noremap = true })
+
+-- NOTE: Harpoon
+local mark = require 'harpoon.mark'
+local ui = require 'harpoon.ui'
+vim.keymap.set('n', '<leader>a', mark.add_file)
+vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu)
+vim.keymap.set('n', '<A-j>', function()
+  ui.nav_file(1)
+end)
+vim.keymap.set('n', '<A-k>', function()
+  ui.nav_file(2)
+end)
+vim.keymap.set('n', '<A-l>', function()
+  ui.nav_file(3)
+end)
+vim.keymap.set('n', '<A-;>', function()
+  ui.nav_file(4)
+end)
