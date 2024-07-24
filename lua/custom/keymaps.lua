@@ -71,3 +71,7 @@ end)
 vim.keymap.set('n', '<A-;>', function()
   ui.nav_file(4)
 end)
+
+-- NOTE: Fine Cmd-line
+vim.keymap.set({ 'n', 'v' }, ':', '<cmd>FineCmdline<cr>')
+vim.keymap.set({ 'n', 'v' }, '<cr>', ':')
