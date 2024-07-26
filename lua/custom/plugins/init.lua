@@ -25,7 +25,7 @@ return {
           lualine_b = { 'branch' },
           lualine_c = { 'filename', 'diff', 'diagnostics' },
           lualine_x = { 'fileformat', 'filetype' },
-          lualine_y = { 'location', 'hostname' },
+          lualine_y = { 'location' },
           lualine_z = { 'os.date("%I:%M %m/%d")' },
         },
         inactive_sections = {},
