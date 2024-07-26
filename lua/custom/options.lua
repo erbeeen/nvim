@@ -13,12 +13,16 @@ vim.opt.laststatus = 0
 
 -- NOTE: For making background color navy blue
 -- Comment out to disable
-local navy_blue = '#282c34'
-vim.api.nvim_set_hl(0, 'Normal', { bg = navy_blue })
-vim.api.nvim_set_hl(0, 'NormalFloat', { bg = navy_blue })
-vim.api.nvim_set_hl(0, 'CursorLine', { bg = navy_blue })
-vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = navy_blue })
-vim.api.nvim_set_hl(0, 'SignColumn', { bg = navy_blue })
+local nvchad_rose_pine_bg = '#13111e'
+vim.api.nvim_set_hl(0, 'Normal', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'FloatWindow', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'FloatBorder', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'CursorLine', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'SignColumn', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'NormalActive', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'NormalNC', { bg = nvchad_rose_pine_bg })
 
 -- NOTE: Copied from kickstart
 -- Turning this on will make indents have character markers
@@ -30,4 +34,18 @@ vim.api.nvim_set_hl(0, 'SignColumn', { bg = navy_blue })
 -- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
+-- vim.opt.inccommand = 'split'
+
+local _border = 'single'
+
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = _border,
+})
+
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+  border = _border,
+})
+
+vim.diagnostic.config {
+  float = { border = _border },
+}

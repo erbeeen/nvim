@@ -4,9 +4,16 @@
 -- See the kickstart.nvim README for more information
 return {
   -- NOTE: Colorschemes
-  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+  { 'catppuccin/nvim', name = 'catppuccin' },
   { 'ellisonleao/gruvbox.nvim' },
-
+  {
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    priority = 1000,
+    init = function()
+      vim.cmd.colorscheme 'rose-pine'
+    end,
+  },
   -- NOTE: Status Line
   {
     'nvim-lualine/lualine.nvim',
@@ -17,12 +24,12 @@ return {
           lualine_a = { 'mode' },
           lualine_b = { 'branch' },
           lualine_c = { 'filename', 'diff', 'diagnostics' },
-          lualine_x = { 'filetype' },
-          lualine_y = { 'location' },
+          lualine_x = { 'fileformat', 'filetype' },
+          lualine_y = { 'location', 'hostname' },
           lualine_z = { 'os.date("%I:%M %m/%d")' },
         },
         inactive_sections = {},
-        options = { theme = 'everforest' },
+        options = { theme = 'iceberg_dark' },
       }
     end,
   },
