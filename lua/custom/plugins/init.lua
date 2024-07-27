@@ -104,12 +104,8 @@ return {
           prompt = ': ',
         },
         popup = {
-          position = {
-            row = '70%',
-            col = '50%',
-          },
           size = {
-            width = '20%',
+            width = '30%',
           },
           border = {
             style = 'rounded',
@@ -117,17 +113,6 @@ return {
           win_options = {
             winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',
           },
-        },
-        hooks = {
-          before_mount = function(input)
-            -- code
-          end,
-          after_mount = function(input)
-            -- code
-          end,
-          set_keymaps = function(imap, feedkeys)
-            -- code
-          end,
         },
       }
     end,
