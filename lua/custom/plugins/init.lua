@@ -91,30 +91,30 @@ return {
   },
 
   -- NOTE: Floating Cmd Line
-  {
-    'VonHeikemen/fine-cmdline.nvim',
-    dependencies = {
-      'MunifTanjim/nui.nvim',
-    },
-    config = function()
-      require('fine-cmdline').setup {
-        cmdline = {
-          enable_keymaps = true,
-          smart_history = true,
-          prompt = ': ',
-        },
-        popup = {
-          size = {
-            width = '30%',
-          },
-          border = {
-            style = 'rounded',
-          },
-          win_options = {
-            winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',
-          },
-        },
-      }
-    end,
-  },
+  -- {
+  --   'VonHeikemen/fine-cmdline.nvim',
+  --   dependencies = {
+  --     'MunifTanjim/nui.nvim',
+  --   },
+  --   config = function()
+  --     require('fine-cmdline').setup {
+  --       cmdline = {
+  --         enable_keymaps = true,
+  --         smart_history = true,
+  --         prompt = ': ',
+  --       },
+  --       popup = {
+  --         size = {
+  --           width = '30%',
+  --         },
+  --         border = {
+  --           style = 'rounded',
+  --         },
+  --         win_options = {
+  --           winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
 }
