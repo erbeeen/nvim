@@ -555,6 +555,7 @@ require('lazy').setup({
         emmet_language_server = {},
         sqlls = {},
         kotlin_language_server = {},
+        clangd = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -598,6 +599,7 @@ require('lazy').setup({
         'stylua', -- Used to format Lua code
         'prettier',
         'autopep8',
+        'clang-format',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
