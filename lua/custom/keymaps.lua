@@ -44,7 +44,7 @@ vim.keymap.set('n', '<leader>gdc', '<cmd> DiffviewClose <cr>', { desc = 'Diffvie
 -- vim.keymap.set('n', '<leader>x', '<cmd> BufferClose! <cr>', { desc = 'Close Buffer' })
 
 -- NOTE: Toggle Term
-vim.keymap.set({ 'n', 'v', 't' }, '<A-m>', '<cmd> :ToggleTerm <cr>', { desc = 'Horizontal Term' })
+vim.keymap.set({ 'n', 'v', 't' }, '<A-n>', '<cmd> :ToggleTerm <cr>', { desc = 'Horizontal Term' })
 
 -- NOTE: NvimTree
 vim.keymap.set({ 'n', 'i', 'v', 't' }, '<C-n>', '<cmd> NvimTreeToggle <cr>', { silent = true, noremap = true })
