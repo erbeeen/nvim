@@ -44,7 +44,7 @@ vim.keymap.set('n', '<leader>gdc', '<cmd> DiffviewClose <cr>', { desc = 'Diffvie
 -- vim.keymap.set('n', '<leader>x', '<cmd> BufferClose! <cr>', { desc = 'Close Buffer' })
 
 -- NOTE: Toggle Term
-vim.keymap.set({ 'n', 'i', 'v', 't' }, '<A-h>', '<cmd> :ToggleTerm <cr>', { desc = 'Horizontal Term' })
+vim.keymap.set({ 'n', 'v', 't' }, '<A-m>', '<cmd> :ToggleTerm <cr>', { desc = 'Horizontal Term' })
 
 -- NOTE: NvimTree
 vim.keymap.set({ 'n', 'i', 'v', 't' }, '<C-n>', '<cmd> NvimTreeToggle <cr>', { silent = true, noremap = true })
@@ -54,16 +54,16 @@ local mark = require 'harpoon.mark'
 local ui = require 'harpoon.ui'
 vim.keymap.set('n', '<leader>a', mark.add_file)
 vim.keymap.set('n', '<A-e>', ui.toggle_quick_menu)
-vim.keymap.set('n', '<A-j>', function()
+vim.keymap.set('n', '<A-u>', function()
   ui.nav_file(1)
 end)
-vim.keymap.set('n', '<A-k>', function()
+vim.keymap.set('n', '<A-i>', function()
   ui.nav_file(2)
 end)
-vim.keymap.set('n', '<A-l>', function()
+vim.keymap.set('n', '<A-o>', function()
   ui.nav_file(3)
 end)
-vim.keymap.set('n', '<A-;>', function()
+vim.keymap.set('n', '<A-p>', function()
   ui.nav_file(4)
 end)
 
