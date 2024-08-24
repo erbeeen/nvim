@@ -38,7 +38,13 @@ return {
   {
     'nvim-tree/nvim-tree.lua',
     config = function()
-      require('nvim-tree').setup()
+      require('nvim-tree').setup {
+        git = {
+          enable = true,
+          ignore = false,
+          timeout = 400,
+        },
+      }
     end,
   },
 
