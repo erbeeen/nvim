@@ -560,6 +560,7 @@ require('lazy').setup({
         kotlin_language_server = {},
         clangd = {},
         cmake = {},
+        dockerls = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
