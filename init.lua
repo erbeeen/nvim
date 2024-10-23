@@ -553,6 +553,7 @@ require('lazy').setup({
       local servers = {
         gopls = {},
         pylsp = {},
+        pyright = {},
         cssls = {},
         html = {},
         emmet_language_server = {},
