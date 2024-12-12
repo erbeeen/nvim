@@ -96,6 +96,11 @@ return {
     end,
   },
 
+  -- NOTE: nvim-jdtls
+  {
+    'mfussenegger/nvim-jdtls',
+  },
+
   -- NOTE: Floating Cmd Line
   -- {
   --   'VonHeikemen/fine-cmdline.nvim',
