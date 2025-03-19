@@ -551,7 +551,7 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        gopls = {},
+        -- gopls = {},
         pylsp = {},
         pyright = {},
         cssls = {},
@@ -891,6 +891,9 @@ require('lazy').setup({
       require('nvim-treesitter.install').prefer_git = true
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup(opts)
+
+      -- Set Zig to be the compiler
+      require('nvim-treesitter.install').compilers = { 'zig' }
 
       -- There are additional nvim-treesitter modules that you can use to interact
       -- with nvim-treesitter. You should go explore a few and see what interests you:

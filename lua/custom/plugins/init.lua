@@ -101,6 +101,19 @@ return {
     'mfussenegger/nvim-jdtls',
   },
 
+  -- NOTE: Flutter Tools
+  {
+    'nvim-flutter/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+    config = function ()
+      require("flutter-tools").setup {}
+    end
+  },
+
   -- NOTE: Floating Cmd Line
   -- {
   --   'VonHeikemen/fine-cmdline.nvim',
