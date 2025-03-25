@@ -109,9 +109,9 @@ return {
       'nvim-lua/plenary.nvim',
       'stevearc/dressing.nvim', -- optional for vim.ui.select
     },
-    config = function ()
-      require("flutter-tools").setup {}
-    end
+    config = function()
+      require('flutter-tools').setup {}
+    end,
   },
 
   -- NOTE: Floating Cmd Line
@@ -146,4 +146,24 @@ return {
   --     }
   --   end,
   -- },
+
+  -- NOTE: Python ENV Selector
+  {
+    'linux-cultist/venv-selector.nvim',
+    dependencies = {
+      'neovim/nvim-lspconfig',
+      'mfussenegger/nvim-dap',
+      'mfussenegger/nvim-dap-python', --optional
+      { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+    },
+    lazy = false,
+    branch = 'regexp', -- This is the regexp branch, use this for the new version
+    keys = {
+      { ',v', '<cmd>VenvSelect<cr>' },
+    },
+    ---@type venv-selector.Config
+    opts = {
+      -- Your settings go here
+    },
+  },
 }
