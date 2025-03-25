@@ -948,9 +948,13 @@ require('lazy').setup({
   },
 })
 
+-- The line beneath this is called `modeline`. See `:help modeline`
+-- vim: ts=2 sts=2 sw=2 et
+
+-- NOTE: All of the lines below here are all your own
+vim.g.terminal_shell = 'powershell'
+
 -- NOTE: Custom Options and Keymaps
 require 'custom.keymaps'
 require 'custom.options'
 
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
