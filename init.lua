@@ -964,5 +964,3 @@ vim.g.terminal_shell = terminal
 -- NOTE: Custom Options and Keymaps
 require 'custom.keymaps'
 require 'custom.options'
-
--- NOTE: This is for an experiment commit
