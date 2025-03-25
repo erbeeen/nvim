@@ -84,10 +84,17 @@ return {
   {
     'akinsho/toggleterm.nvim',
     config = function()
+      local os_name = package.config:sub(1, 1)
+      local terminal = ''
+      if os_name == '\\' then
+        terminal = 'powershell.exe'
+      else
+        terminal = 'zsh'
+      end
       require('toggleterm').setup {
-        shell = "powershell.exe"
+        shell = terminal
       }
-    end,
+    end
   },
 
   -- NOTE: Harpoon

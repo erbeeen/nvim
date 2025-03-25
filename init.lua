@@ -952,7 +952,14 @@ require('lazy').setup({
 -- vim: ts=2 sts=2 sw=2 et
 
 -- NOTE: All of the lines below here are all your own
-vim.g.terminal_shell = 'powershell'
+local os_name = package.config:sub(1, 1)
+local terminal = ''
+if os_name == '\\' then
+  terminal = 'powershell.exe'
+else
+  terminal = 'zsh'
+end
+vim.g.terminal_shell = terminal
 
 -- NOTE: Custom Options and Keymaps
 require 'custom.keymaps'
