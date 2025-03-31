@@ -908,7 +908,9 @@ require('lazy').setup({
       require('nvim-treesitter.configs').setup(opts)
 
       -- Set Zig to be the compiler
-      require('nvim-treesitter.install').compilers = { 'zig' }
+      if os_name == "Windows_NT" then
+        require('nvim-treesitter.install').compilers = { 'zig' }
+      end
 
       -- There are additional nvim-treesitter modules that you can use to interact
       -- with nvim-treesitter. You should go explore a few and see what interests you:
