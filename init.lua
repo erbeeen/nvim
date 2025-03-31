@@ -570,9 +570,9 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- ts_ls = {
-        --   filetypes = { 'javascript', 'typescript', 'jsx', 'typescript.tsx', 'typescriptreact', 'javascriptreact' },
-        -- },
+        ts_ls = {
+          filetypes = { 'javascript', 'typescript', 'jsx', 'typescript.tsx', 'typescriptreact', 'javascriptreact' },
+        },
         --
 
         lua_ls = {
@@ -590,21 +590,6 @@ require('lazy').setup({
           },
         },
       }
-
-      -- NOTE: This is for discrepancy of tsserver on Windows and
-      -- Linux. Checks if os is windows and then puts ts_ls on servers table
-      -- or tsserver if linux
-
-      local os_name = vim.loop.os_uname().sysname
-      if os_name == "Windows_NT" then
-        servers.ts_ls = {
-          filetypes = { 'javascript', 'typescript', 'jsx', 'typescript.tsx', 'typescriptreact', 'javascriptreact' },
-        }
-      else
-        servers.tsserver= {
-          filetypes = { 'javascript', 'typescript', 'jsx', 'typescript.tsx', 'typescriptreact', 'javascriptreact' },
-        }
-      end
 
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
