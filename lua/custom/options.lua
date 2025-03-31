@@ -15,15 +15,15 @@ vim.opt.laststatus = 0
 -- Comment out to disable
 local nvchad_rose_pine_bg = '#13111e'
 local none = 'NONE'
-vim.api.nvim_set_hl(0, 'Normal', { bg = none })
-vim.api.nvim_set_hl(0, 'NormalFloat', { bg = none })
-vim.api.nvim_set_hl(0, 'FloatWindow', { bg = none })
-vim.api.nvim_set_hl(0, 'FloatBorder', { bg = none })
-vim.api.nvim_set_hl(0, 'CursorLine', { bg = none })
-vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = none })
-vim.api.nvim_set_hl(0, 'SignColumn', { bg = none })
-vim.api.nvim_set_hl(0, 'NormalActive', { bg = none })
-vim.api.nvim_set_hl(0, 'NormalNC', { bg = none })
+vim.api.nvim_set_hl(0, 'Normal', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'FloatWindow', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'FloatBorder', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'CursorLine', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'SignColumn', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'NormalActive', { bg = nvchad_rose_pine_bg })
+vim.api.nvim_set_hl(0, 'NormalNC', { bg = nvchad_rose_pine_bg })
 
 -- NOTE: Copied from kickstart
 -- Turning this on will make indents have character markers
