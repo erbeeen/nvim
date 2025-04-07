@@ -266,7 +266,7 @@ require('lazy').setup({
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
         { '<leader>g', group = 'Neo[G]it' },
-        { '<leader>f', group = 'LSP Format and Diagnostic' },
+        { '<leader>f', group = 'LSP [F]ormat and Diagnostic' },
       }
     end,
   },

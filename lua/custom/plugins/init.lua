@@ -39,10 +39,13 @@ return {
     'nvim-tree/nvim-tree.lua',
     config = function()
       require('nvim-tree').setup {
+        view = {
+          side = "right",
+        },
         git = {
           enable = true,
           ignore = false,
-          timeout = 400,
+          timeout = 1000,
         },
       }
     end,
