@@ -659,7 +659,7 @@ require('lazy').setup({
         javascript = { 'prettier' },
         typescript = { 'prettier' },
         json = { 'prettier' },
-        c = { 'clang-format' },
+        C = { 'clang-format' },
         cpp = { 'clang-format' },
         python = { 'autopep8' },
 
