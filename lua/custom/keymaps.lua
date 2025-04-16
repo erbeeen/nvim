@@ -10,6 +10,13 @@ vim.keymap.set('i', '<C-a>', '<Esc>I')
 -- NOTE: To close a buffer. Substitute for disabling barbar
 vim.keymap.set('n', '<leader>x', '<cmd> bd <cr>', { desc = 'Close buffer' })
 
+-- NOTE: LSP floating hover function
+vim.keymap.set('n', 'K', function()
+  vim.lsp.buf.hover {
+    border = 'rounded',
+  }
+end, { desc = 'LSP Hover' })
+
 -- NOTE: LSP Floating Diagnostic
 vim.keymap.set('n', '<leader>ff', '<cmd> lua vim.diagnostic.open_float() <cr>', { desc = 'LSP Floating Diagnostic' })
 
