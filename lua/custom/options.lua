@@ -40,7 +40,7 @@ vim.api.nvim_set_hl(0, 'NormalNC', { bg = nvchad_rose_pine_bg })
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
 
--- local _border = 'single'
+local _border = 'single'
 
 -- vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
 --   border = _border,
