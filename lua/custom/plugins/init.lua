@@ -40,7 +40,7 @@ return {
     config = function()
       require('nvim-tree').setup {
         view = {
-          side = "right",
+          side = 'right',
         },
         git = {
           enable = true,
@@ -95,9 +95,9 @@ return {
         terminal = 'zsh'
       end
       require('toggleterm').setup {
-        shell = terminal
+        shell = terminal,
       }
-    end
+    end,
   },
 
   -- NOTE: Harpoon
