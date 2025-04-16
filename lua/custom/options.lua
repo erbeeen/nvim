@@ -11,6 +11,9 @@ vim.o.background = 'dark'
 -- NOTE: For removing bottom status line
 vim.opt.laststatus = 0
 
+-- NOTE: For setting colorscheme
+vim.cmd.colorscheme 'gruvbox'
+
 -- NOTE: For making background color navy blue
 -- Comment out to disable
 local nvchad_rose_pine_bg = '#13111e'
