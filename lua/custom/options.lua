@@ -6,6 +6,7 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
+vim.o.cmdheight = 0
 vim.o.background = 'dark'
 vim.o.wrap = false
 
