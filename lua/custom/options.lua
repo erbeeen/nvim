@@ -7,6 +7,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.o.background = 'dark'
+vim.o.wrap = false
 
 -- NOTE: For removing bottom status line
 vim.opt.laststatus = 0
