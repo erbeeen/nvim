@@ -8,6 +8,8 @@ vim.keymap.set('i', '<C-e>', '<Esc>A')
 vim.keymap.set('i', '<C-a>', '<Esc>I')
 
 -- NOTE: To close a buffer. Substitute for disabling barbar
+vim.keymap.set('n', '<tab>', '<cmd> bnext <cr>', { desc = 'Next Buffer' })
+vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <cr>', { desc = 'Previous Buffer' })
 vim.keymap.set('n', '<leader>x', '<cmd> bd <cr>', { desc = 'Close buffer' })
 
 -- NOTE: LSP floating hover function
