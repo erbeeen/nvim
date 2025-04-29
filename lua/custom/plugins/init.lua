@@ -192,9 +192,9 @@ return {
       end
       metals_config.init_options.statusBarProvider = "off"
       metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
-      metals_config.settings = {
-        showImplicitArguments = true
-      }
+      -- metals_config.settings = {
+      --   showImplicitArguments = true
+      -- }
 
       return metals_config
     end,

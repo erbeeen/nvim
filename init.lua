@@ -611,6 +611,8 @@ require('lazy').setup({
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
+        ensure_installed = servers,
+        automatic_installation = true,
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
@@ -893,7 +895,7 @@ require('lazy').setup({
       require('nvim-treesitter.configs').setup(opts)
 
       -- Set Zig to be the compiler
-      if os_name == "Windows_NT" then
+      if os_name == 'Windows_NT' then
         require('nvim-treesitter.install').compilers = { 'zig' }
       end
 
@@ -915,7 +917,7 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',

@@ -9,6 +9,10 @@ vim.opt.softtabstop = 2
 vim.o.cmdheight = 0
 vim.o.background = 'dark'
 vim.o.wrap = false
+vim.o.termguicolors = true
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- NOTE: For setting colorscheme
 vim.cmd.colorscheme 'gruvbox'
@@ -45,21 +49,21 @@ vim.opt.inccommand = 'split'
 
 local _border = 'single'
 
--- vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
---   border = _border,
--- })
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = _border,
+})
 
--- vim.lsp.handlers['/textDocument/hover'] = {
---   border = _border
--- }
+vim.lsp.handlers['/textDocument/hover'] = {
+  border = _border
+}
 
--- vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
---   border = _border,
--- })
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+  border = _border,
+})
 
--- vim.lsp.handlers['textDocument/signatureHelp'] = {
---   border = _border
--- }
+vim.lsp.handlers['textDocument/signatureHelp'] = {
+  border = _border
+}
 
 vim.diagnostic.config {
   float = { border = _border },
