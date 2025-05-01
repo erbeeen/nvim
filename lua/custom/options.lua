@@ -10,6 +10,7 @@ vim.o.cmdheight = 0
 vim.o.background = 'dark'
 vim.o.wrap = false
 vim.o.termguicolors = true
+vim.o.autoread = true
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
