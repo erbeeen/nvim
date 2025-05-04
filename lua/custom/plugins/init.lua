@@ -13,6 +13,14 @@ return {
     -- init = function()
     -- end,
   },
+  --NOTE: Colorizer for coloring hex codes in css
+  {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      require('colorizer').setup()
+    end,
+  },
+
   -- NOTE: Status Line
   {
     'nvim-lualine/lualine.nvim',
@@ -190,8 +198,8 @@ return {
       metals_config.on_attach = function(client, bufnr)
         -- your on_attach function
       end
-      metals_config.init_options.statusBarProvider = "off"
-      metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
+      metals_config.init_options.statusBarProvider = 'off'
+      metals_config.capabilities = require('cmp_nvim_lsp').default_capabilities()
       -- metals_config.settings = {
       --   showImplicitArguments = true
       -- }
