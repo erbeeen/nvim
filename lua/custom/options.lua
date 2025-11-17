@@ -25,16 +25,17 @@ vim.opt.laststatus = 3
 -- NOTE: For making background color navy blue
 -- Comment out to disable
 local nvchad_rose_pine_bg = '#13111e'
+local dark_green_bg = '#181d1c'
 local none = 'NONE'
-vim.api.nvim_set_hl(0, 'Normal', { bg = none })
-vim.api.nvim_set_hl(0, 'NormalFloat', { bg = none })
-vim.api.nvim_set_hl(0, 'FloatWindow', { bg = none })
-vim.api.nvim_set_hl(0, 'FloatBorder', { bg = none })
-vim.api.nvim_set_hl(0, 'CursorLine', { bg = none })
-vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = none })
-vim.api.nvim_set_hl(0, 'SignColumn', { bg = none })
-vim.api.nvim_set_hl(0, 'NormalActive', { bg = none })
-vim.api.nvim_set_hl(0, 'NormalNC', { bg = none })
+vim.api.nvim_set_hl(0, 'Normal', { bg = dark_green_bg })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = dark_green_bg })
+vim.api.nvim_set_hl(0, 'FloatWindow', { bg = dark_green_bg })
+vim.api.nvim_set_hl(0, 'FloatBorder', { bg = dark_green_bg })
+vim.api.nvim_set_hl(0, 'CursorLine', { bg = dark_green_bg })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = dark_green_bg })
+vim.api.nvim_set_hl(0, 'SignColumn', { bg = dark_green_bg })
+vim.api.nvim_set_hl(0, 'NormalActive', { bg = dark_green_bg })
+vim.api.nvim_set_hl(0, 'NormalNC', { bg = dark_green_bg })
 
 -- NOTE: Copied from kickstart
 -- Turning this on will make indents have character markers
