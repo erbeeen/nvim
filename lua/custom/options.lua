@@ -15,6 +15,9 @@ vim.o.autoread = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- NOTE: PHP Blade Lsp Setting
+-- vim.lsp.enable('stimulus_ls')
+
 -- NOTE: For setting colorscheme
 vim.cmd.colorscheme 'gruvbox'
 

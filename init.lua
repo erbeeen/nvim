@@ -558,7 +558,22 @@ require('lazy').setup({
         pyright = {},
         cssls = {},
         html = {},
-        emmet_language_server = {},
+        emmet_language_server = {
+          filetypes = {
+            'css',
+            'html',
+            'javascript',
+            'typescript',
+            'javascriptreact',
+            'typescriptreact',
+            'less',
+            'sass',
+            'scss',
+            'vue',
+            'blade',
+            'php',
+          },
+        },
         sqlls = {},
         kotlin_language_server = {},
         clangd = {},
@@ -566,6 +581,8 @@ require('lazy').setup({
         dockerls = {},
         jdtls = {},
         intelephense = {},
+        stimulus_ls = {},
+        -- phpactor = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -610,6 +627,7 @@ require('lazy').setup({
         'prettier',
         'autopep8',
         'clang-format',
+        'pint',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
