@@ -11,19 +11,16 @@ vim.o.background = 'dark'
 vim.o.wrap = false
 vim.o.termguicolors = true
 vim.o.autoread = true
+vim.o.winborder = 'rounded'
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
--- NOTE: PHP Blade Lsp Setting
--- vim.lsp.enable('stimulus_ls')
 
 -- NOTE: For setting colorscheme
 vim.cmd.colorscheme 'gruvbox'
 
 -- NOTE: For removing bottom status line: set value to 0
 vim.opt.laststatus = 3
-
 
 -- NOTE: For making background color navy blue
 -- Comment out to disable
@@ -51,25 +48,3 @@ vim.api.nvim_set_hl(0, 'NormalNC', { bg = dark_green_bg })
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
-
-local _border = 'single'
-
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = _border,
-})
-
-vim.lsp.handlers['/textDocument/hover'] = {
-  border = _border
-}
-
-vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-  border = _border,
-})
-
-vim.lsp.handlers['textDocument/signatureHelp'] = {
-  border = _border
-}
-
-vim.diagnostic.config {
-  float = { border = _border },
-}
