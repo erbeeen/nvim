@@ -7,6 +7,10 @@ vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv")
 vim.keymap.set('i', '<C-e>', '<Esc>A')
 vim.keymap.set('i', '<C-a>', '<Esc>I')
 
+-- NOTE: Quickfix
+vim.keymap.set('n', '<leader>J', '<cmd>cnext<cr>', { desc = 'Quickfix Next' })
+vim.keymap.set('n', '<leader>K', '<cmd>cprev<cr>', { desc = 'Quickfix Back' })
+
 -- NOTE: To close a buffer. Substitute for disabling barbar
 vim.keymap.set('n', '<tab>', '<cmd> bnext <cr>', { desc = 'Next Buffer' })
 vim.keymap.set('n', '<S-tab>', '<cmd> bprevious <cr>', { desc = 'Previous Buffer' })
@@ -21,6 +25,9 @@ end, { desc = 'LSP Hover' })
 
 -- NOTE: LSP Floating Diagnostic
 vim.keymap.set('n', '<leader>ff', '<cmd> lua vim.diagnostic.open_float() <cr>', { desc = 'LSP Floating Diagnostic' })
+
+-- NOTE: LSP Show all errors on the project
+vim.keymap.set('n', '<leader>fe', '<cmd> lua vim.diagnostic.setqflist() <cr>', { desc = 'LSP See all errors' })
 
 -- NOTE: Todo Comments
 vim.keymap.set('n', '<leader>j', function()
