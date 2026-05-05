@@ -6,6 +6,7 @@ return {
   -- NOTE: Colorschemes
   { 'catppuccin/nvim', name = 'catppuccin' },
   { 'ellisonleao/gruvbox.nvim' },
+  { 'ThePrimeagen/vim-be-good' },
   {
     'rose-pine/neovim',
     name = 'rose-pine',
